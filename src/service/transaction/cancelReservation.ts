@@ -1,6 +1,6 @@
-import * as factory from '@toei-jp/chevre-factory';
 import { NO_CONTENT, OK } from 'http-status';
 
+import * as factory from '../../factory';
 import { Service } from '../../service';
 
 /**
