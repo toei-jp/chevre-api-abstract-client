@@ -93,6 +93,19 @@ export class EventService extends Service {
         }).then(async (response) => response.json());
     }
     /**
+     * 複数の上映イベント作成
+     */
+    public async createMultipleScreeningEvent(
+        params: factory.event.screeningEvent.IAttributes[]
+    ): Promise<factory.event.screeningEvent.IEvent> {
+        return this.fetch({
+            uri: '/events/screeningEvent/saveMultiple',
+            method: 'POST',
+            body: { attributes: params },
+            expectedStatusCodes: [CREATED]
+        }).then(async (response) => response.json());
+    }
+    /**
      * 上映イベント検索
      */
     public async searchScreeningEvents(
