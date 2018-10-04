@@ -14,7 +14,7 @@ export class DistributionsService extends Service {
             // qs: params,
             expectedStatusCodes: [OK]
         }).then(async (response) => {
-            return await response.json();
+            return response.json();
         });
     }
 }
