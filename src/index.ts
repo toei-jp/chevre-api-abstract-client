@@ -7,6 +7,7 @@ import * as factory from './factory';
 import { AuthClient } from './auth/authClient';
 
 import { CreativeWorkService } from './service/creativeWork';
+import { DistributionsService } from './service/distributions';
 import { EventService } from './service/event';
 import { PlaceService } from './service/place';
 import { ReservationService } from './service/reservation';
@@ -28,6 +29,10 @@ export namespace service {
      * 作品サービス
      */
     export class CreativeWork extends CreativeWorkService { }
+    /**
+     * 配給サービス
+     */
+    export class Distributions extends DistributionsService { }
     /**
      * イベントサービス
      */
