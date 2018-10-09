@@ -42,6 +42,15 @@ export class CreativeWorkService extends Service {
             expectedStatusCodes: [OK]
         }).then(async (response) => response.json());
     }
+    public async getMovieRatingByIdentifier(params: {
+        identifier: string;
+    }): Promise<factory.creativeWork.movie.ICreativeWorkRating> {
+        return this.fetch({
+            uri: `/creativeWorks/movie/getRating/${params.identifier}`,
+            method: 'GET',
+            expectedStatusCodes: [OK]
+        }).then(async (response) => response.json());
+    }
     public async updateMovie(params: factory.creativeWork.movie.ICreativeWork): Promise<void> {
         await this.fetch({
             uri: `/creativeWorks/movie/${params.identifier}`,

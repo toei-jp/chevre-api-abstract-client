@@ -145,4 +145,18 @@ export class TicketTypeService extends Service {
             expectedStatusCodes: [NO_CONTENT]
         });
     }
+    /**
+     * 関連券種グループ
+     */
+    public async getTicketTypeGroupList(params: {
+        ticketTypeId: string;
+    }): Promise<factory.ticketType.ITicketType[]> {
+        return this.fetch({
+            uri: `/ticketTypes/getTicketTypeGroupList/${params.ticketTypeId}`,
+            method: 'GET',
+            expectedStatusCodes: [OK]
+        }).then(async (response) => {
+            return response.json();
+        });
+    }
 }
