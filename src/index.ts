@@ -8,6 +8,7 @@ import { AuthClient } from './auth/authClient';
 
 import { CreativeWorkService } from './service/creativeWork';
 import { DistributionsService } from './service/distributions';
+import { EntertainmentTypeService } from './service/entertainmentType';
 import { EventService } from './service/event';
 import { PlaceService } from './service/place';
 import { ReservationService } from './service/reservation';
@@ -33,6 +34,10 @@ export namespace service {
      * 配給サービス
      */
     export class Distributions extends DistributionsService { }
+    /**
+     * 興行区分サービス
+     */
+    export class EntertainmentType extends EntertainmentTypeService { }
     /**
      * イベントサービス
      */
