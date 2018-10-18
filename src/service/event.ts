@@ -188,4 +188,17 @@ export class EventService extends Service {
             expectedStatusCodes: [OK]
         }).then(async (response) => response.json());
     }
+    /**
+     * 券種の種別で集計API
+     */
+    public async countTicketTypePerEvent(
+        params: factory.event.screeningEvent.ICountTicketTypePerEventConditions
+    ): Promise<factory.event.screeningEvent.ICountTicketTypePerEventResult> {
+        return this.fetch({
+            uri: `/events/screeningEvent/countTicketTypePerEvent`,
+            method: 'GET',
+            qs: params,
+            expectedStatusCodes: [OK]
+        }).then(async (response) => response.json());
+    }
 }
