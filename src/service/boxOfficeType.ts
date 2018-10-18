@@ -6,14 +6,14 @@ import { Service } from '../service';
 /**
  * 興行区分サービス
  */
-export class EntertainmentTypeService extends Service {
+export class BoxOfficeTypeService extends Service {
     /**
      * 興行区分グループ作成
      */
-    public async getEntertainmentTypeList(
-    ): Promise<factory.entertainmentType.IEntertainmentType> {
+    public async getBoxOfficeTypeList(
+    ): Promise<factory.boxOfficeType.IBoxOfficeType> {
         return this.fetch({
-            uri: '/entertainmentTypes/getEntertainmentTypeList',
+            uri: '/boxOfficeTypes/getBoxOfficeTypeList',
             method: 'GET',
             expectedStatusCodes: [OK]
         }).then(async (response) => response.json());

@@ -6,12 +6,13 @@ import * as factory from './factory';
 
 import { AuthClient } from './auth/authClient';
 
+import { BoxOfficeTypeService } from './service/boxOfficeType';
 import { CreativeWorkService } from './service/creativeWork';
 import { DistributionsService } from './service/distributions';
-import { EntertainmentTypeService } from './service/entertainmentType';
 import { EventService } from './service/event';
 import { PlaceService } from './service/place';
 import { ReservationService } from './service/reservation';
+import { SubjectService } from './service/subject';
 import { TicketTypeService } from './service/ticketType';
 import { CancelReservationTransactionService } from './service/transaction/cancelReservation';
 import { ReserveTransactionService } from './service/transaction/reserve';
@@ -37,7 +38,7 @@ export namespace service {
     /**
      * 興行区分サービス
      */
-    export class EntertainmentType extends EntertainmentTypeService { }
+    export class BoxOfficeType extends BoxOfficeTypeService { }
     /**
      * イベントサービス
      */
@@ -50,6 +51,10 @@ export namespace service {
      * 予約サービス
      */
     export class Reservation extends ReservationService { }
+    /**
+     * 科目サービス
+     */
+    export class Subject extends SubjectService { }
     /**
      * 券種サービス
      */
