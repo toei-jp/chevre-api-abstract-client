@@ -84,6 +84,7 @@ export class EventService extends Service {
             expectedStatusCodes: [CREATED]
         }).then(async (response) => response.json());
     }
+
     /**
      * 複数の上映イベント作成
      */
@@ -173,6 +174,7 @@ export class EventService extends Service {
             expectedStatusCodes: [OK]
         }).then(async (response) => response.json());
     }
+
     /**
      * 券種の種別で集計API
      */
